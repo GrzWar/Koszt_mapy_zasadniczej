@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgCosts</class>
+ <widget class="QDialog" name="dlgCosts">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>656</width>
+    <height>297</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Koszty map w powiatach</string>
+  </property>
+  <widget class="QTableWidget" name="tblCosts">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>631</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>Powiat</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>powierzchnia</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>koszt (1:500)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>koszt (1:1000)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>koszt (1:2000)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>koszt (1:5000)</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
