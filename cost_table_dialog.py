@@ -13,9 +13,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_dlgCosts(object):
     def setupUi(self, dlgCosts):
         dlgCosts.setObjectName("dlgCosts")
-        dlgCosts.resize(656, 297)
+        dlgCosts.resize(676, 297)
         self.tblCosts = QtWidgets.QTableWidget(dlgCosts)
-        self.tblCosts.setGeometry(QtCore.QRect(10, 20, 631, 261))
+        self.tblCosts.setGeometry(QtCore.QRect(10, 20, 651, 261))
         self.tblCosts.setAlternatingRowColors(True)
         self.tblCosts.setObjectName("tblCosts")
         self.tblCosts.setColumnCount(6)
