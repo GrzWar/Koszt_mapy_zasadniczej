@@ -208,10 +208,9 @@ class KosztMapy:
 
             #loading layer with voivodeships included in plugin package
             vector_voivodeship = QgsVectorLayer(path_voivodeship, "granice_powiatow", "ogr")
-            if not vector_voivodeship.isValid():
-                print("Nie znaleziono warstwy województw w lokalizacji wtyczki!")
-            else:
-                QgsProject.instance().addMapLayer(vector_voivodeship)
+            QgsProject.instance().addMapLayer(vector_voivodeship)
+            vector_voivodeship.setProviderEncoding(u'UTF-8')
+            vector_voivodeship.dataProvider().setEncoding(u'UTF-8')
             #specyfying range of map with the vector layer from combobox
             lyrMapPoly = self.dlg.cmbLayer.currentLayer()
             #clipping layer with voivodeship with the polygon and creating a shapefile in plugin directory

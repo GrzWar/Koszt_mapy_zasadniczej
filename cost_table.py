@@ -6,3 +6,5 @@ class DlgCosts(QDialog, Ui_dlgCosts):
         super(DlgCosts, self).__init__()
         self.setupUi(self)
 
+        self.tblCosts.setColumnWidth(0,130)
+
