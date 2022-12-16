@@ -6,7 +6,9 @@ Koszt określany jest na podstawie załącznika do [ustawy z dnia 17 maja 1989r.
 
 W celu obliczenia prawdopodobnego kosztu mapy zasadniczej należy wskazać warstwę poligonową z zakresem zamawianej mapy. 
 
+## Instalacja 
 
+Aby zainstalować wtyczkę, należy ściągnąć ją w formacie .zip, a następnie w QGIS wybrać menu *Wtyczki -> Zarządzanie wtyczkami -> Instaluj z pliku ZIP*, wskazać lokalizację ściągniętego pliku i kliknąć "Zainstaluj wtyczkę".  
 
 ## Szczegóły obliczeniowe
 Zgodnie z załącznikiem do prawa geodezyjnego i kartograficznego, przy zamawianiu kopii zasadniczej stosuje się współczynniki korygujące:
