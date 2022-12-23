@@ -2,7 +2,7 @@
 # Koszt mapy zasadniczej - wtyczka QGIS3
 
 Wtyczka QGIS do określania prawdopodobnego kosztu pozyskania wektorowej mapy zasadniczej.
-Koszt określany jest na podstawie załącznika do [ustawy z dnia 17 maja 1989r. - prawo geodezyjne i kartograficzne](https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19890300163/U/D19890163Lj.pdf) oraz [obwieszczenia Ministra Rozwoju, Pracy i Technologii z dnia 1 października 2021 r. w sprawie ogłoszenia obowiązujących od dnia 1 stycznia 2022 r. stawek opłat za udostępnianie materiałów państwowego zasobu geodezyjnego i kartograficznego](https://isap.sejm.gov.pl/isap.nsf/download.xsp/WMP20210000964/O/M20210964.pdf).
+Koszt określany jest na podstawie załącznika do [ustawy z dnia 17 maja 1989r. - prawo geodezyjne i kartograficzne](https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19890300163/U/D19890163Lj.pdf) oraz [obieszczenia Ministra Rozwoju i Technologii z dnia 25 października 2022 r. w sprawie ogłoszenia obowiązujących od dnia 1 stycznia 2023 r. stawek opłat za udostępnianie materiałów państwowego zasobu geodezyjnego i kartograficznego](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WMP20220001038).
 
 W celu obliczenia prawdopodobnego kosztu mapy zasadniczej należy wskazać warstwę poligonową z zakresem zamawianej mapy. 
 
