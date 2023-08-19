@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>676</width>
-    <height>297</height>
+    <height>274</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>20</y>
      <width>651</width>
-     <height>261</height>
+     <height>201</height>
     </rect>
    </property>
    <property name="alternatingRowColors">
@@ -56,7 +56,37 @@
     </property>
    </column>
   </widget>
+  <widget class="QPushButton" name="exportBtn">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>230</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>eksportuj</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>exportBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>tblCosts</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
