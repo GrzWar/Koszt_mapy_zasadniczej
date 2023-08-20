@@ -199,12 +199,25 @@ class KosztMapy:
         # See if OK was pressed
         if result:
 
-            #specyfying the direction of files with voivodeship (included to plugin) and direction of temporary files
+            #specyfying the direction of files with voivodeship (included to plugin),direction of temporary files and direction of file with unit price for map
             path_voivodeship = str(os.path.join(os.path.dirname(__file__),'PRG','A02_Granice_powiatow_plugin.shp'))
             target_path = str(os.path.join(os.path.dirname(__file__),'PRG','clipped_plugin.shp'))
+            price_path = str(os.path.join(os.path.dirname(__file__), 'cena.txt'))
             #Logs for debugging
             QgsMessageLog.logMessage("source_path: {}".format(path_voivodeship), "koszt_mapy", level=Qgis.Info)
             QgsMessageLog.logMessage("target_path: {}".format(target_path), "koszt_mapy", level=Qgis.Info)
+            QgsMessageLog.logMessage("price_path: {}".format(price_path), "koszt_mapy", level=Qgis.Info)
+
+            #opening file with the price, asigning a value to variable "price" and closing the file
+            price_file = open(price_path, 'r')
+            price = price_file.read()
+            price_file.close()
+            #changing type of price variable: string to float
+            price = float(price)
+
+            # Logs for debugging
+            QgsMessageLog.logMessage("price: {}".format(price), "koszt_mapy", level=Qgis.Info)
+
 
             #loading layer with voivodeships included in plugin package
             vector_voivodeship = QgsVectorLayer(path_voivodeship, "granice_powiatow", "ogr")
@@ -255,11 +268,11 @@ class KosztMapy:
 
                 # calculating cost of map
                 if area_ha < 10:
-                    cost_of_map = ((area_ha * 24.07 * 2))
+                    cost_of_map = ((area_ha * price * 2))
                 if area_ha > 10 and area_ha < 100:
-                    cost_of_map = ((((24.07 * 10) +((area_ha-10)*24.07 * 0.8))*2))
+                    cost_of_map = ((((price * 10) +((area_ha-10)*price * 0.8))*2))
                 if area_ha > 100:
-                    cost_of_map = ((((10 + 24.07 +(90*24.07*0.8)+((area_ha-100)*24.07 * 0.6))*2)))
+                    cost_of_map = ((((10 + price +(90*price*0.8)+((area_ha-100)*price * 0.6))*2)))
 
                 # calculating cost for 1:500 scale
                 cost_of_map_500 = cost_of_map * 1

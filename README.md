@@ -40,7 +40,9 @@ elektroniczną albo w postaci drukowanej;
 	-  0,3 – dla mapy zasadniczej w skalach 1:5000.
 W niniejszej wtyczce obliczany jest koszt mapy dla każdej z możliwych skal.
 
-6. Sp - stawka podstawowa - dla mapy zasadniczej w wersji wektorowej, zgodnie z obwieszczeniem Ministra Rozwoju, Pracy i Technologii z dnia 1 października 2021 r. w sprawie ogłoszenia obowiązujących od dnia 1 stycznia 2022 r. stawek opłat za udostępnianie materiałów państwowego zasobu geodezyjnego i kartograficznego, wynosi 21,53 
+6. Sp - stawka podstawowa - dla mapy zasadniczej w wersji wektorowej, zgodnie z obwieszczeniem Ministra Rozwoju, Pracy i Technologii z dnia 1 października 2021 r. w sprawie ogłoszenia obowiązujących od dnia 1 stycznia 2022 r. stawek opłat za udostępnianie materiałów państwowego zasobu geodezyjnego i kartograficznego, wynosi 24,07 zł. Stawka podstawowa jest importowana z pliku o nazwie "cena.txt" znajdującego się w folderze z wtyczką i może być uaktualniania samodzielnie przez użytkownika.
+Lokalizację folderu z wtyczką można znaleźć klikając *Settings -> User Profiles -> Open Active Profile Folder* (w polskiej wersji językowej: *Ustawienia -> Profil użytkownika -> Otwórz katalog aktywnego profilu*), a następnie wchodząc do folderów *python -> plugin -> Koszt_mapy_zasadniczej*.
+
 
 Dla obszarów mniejszych niż 10ha (o liczbie jednostek rozliczeniowych (Lrj) mniejszej niż 10) wysokość opłaty za udostępnienie mapy (Wop) oblicza się wg. wzoru:
 
