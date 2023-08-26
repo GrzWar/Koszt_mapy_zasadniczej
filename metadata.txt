@@ -6,7 +6,7 @@
 name=Koszt mapy zasadniczej
 qgisMinimumVersion=3.0
 description=Oblicza prawdopodobny koszt zamawianej mapy zasadniczej
-version=1.02
+version=1.03
 author=Grzegorz Warszycki
 email=opti33@gmail.com
 
