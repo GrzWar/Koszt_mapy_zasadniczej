@@ -28,6 +28,7 @@ from qgis.core import QgsApplication,QgsMessageLog, Qgis, QgsVectorLayer, QgsPro
 import processing
 import os
 from .cost_table import DlgCosts
+import math
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -283,11 +284,17 @@ class KosztMapy:
                 # calculating cost for 1:5000 scale
                 cost_of_map_5000 = cost_of_map * 0.3
 
+                #rounding to 0.10 and half up (from 0.05 it rounds to 0.10)
+
+                def round_half_up(n, decimals=0):
+                    multiplier = 10 ** decimals
+                    return math.floor(n * multiplier + 0.5) / multiplier
+
                 #populating table with costs
-                dlgCosts.tblCosts.setItem(row, 2, QTableWidgetItem(str(round(cost_of_map_500,2))+" zł"))
-                dlgCosts.tblCosts.setItem(row, 3, QTableWidgetItem(str(round(cost_of_map_1000, 2)) + " zł"))
-                dlgCosts.tblCosts.setItem(row, 4, QTableWidgetItem(str(round(cost_of_map_2000, 2)) + " zł"))
-                dlgCosts.tblCosts.setItem(row, 5, QTableWidgetItem(str(round(cost_of_map_5000, 2)) + " zł"))
+                dlgCosts.tblCosts.setItem(row, 2, QTableWidgetItem(str(round_half_up(cost_of_map_500,1))+"0 zł"))
+                dlgCosts.tblCosts.setItem(row, 3, QTableWidgetItem(str(round_half_up(cost_of_map_1000, 1)) + "0 zł"))
+                dlgCosts.tblCosts.setItem(row, 4, QTableWidgetItem(str(round_half_up(cost_of_map_2000, 1)) + "0 zł"))
+                dlgCosts.tblCosts.setItem(row, 5, QTableWidgetItem(str(round_half_up(cost_of_map_5000, 1)) + "0 zł"))
 
 
 
