@@ -12,13 +12,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import csv
 
 
-
 class Ui_dlgCosts(object):
     def setupUi(self, dlgCosts):
         dlgCosts.setObjectName("dlgCosts")
         dlgCosts.resize(676, 274)
         self.tblCosts = QtWidgets.QTableWidget(dlgCosts)
-        self.tblCosts.setGeometry(QtCore.QRect(10, 20, 651, 201))
+        self.tblCosts.setGeometry(QtCore.QRect(10, 20, 651, 211))
         self.tblCosts.setAlternatingRowColors(True)
         self.tblCosts.setObjectName("tblCosts")
         self.tblCosts.setColumnCount(6)
@@ -36,12 +35,15 @@ class Ui_dlgCosts(object):
         item = QtWidgets.QTableWidgetItem()
         self.tblCosts.setHorizontalHeaderItem(5, item)
         self.exportBtn = QtWidgets.QPushButton(dlgCosts)
-        self.exportBtn.setGeometry(QtCore.QRect(570, 230, 90, 28))
+        self.exportBtn.setGeometry(QtCore.QRect(460, 240, 90, 28))
         self.exportBtn.setObjectName("exportBtn")
-        self.exportBtn.clicked.connect(self.export_table_data)  # type: ignore
+        self.closeBtn = QtWidgets.QPushButton(dlgCosts)
+        self.closeBtn.setGeometry(QtCore.QRect(570, 240, 90, 28))
+        self.closeBtn.setObjectName("closeBtn")
 
         self.retranslateUi(dlgCosts)
-
+        self.exportBtn.clicked.connect(self.export_table_data)  # type: ignore
+        self.closeBtn.clicked.connect(dlgCosts.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(dlgCosts)
 
     def retranslateUi(self, dlgCosts):
@@ -59,7 +61,8 @@ class Ui_dlgCosts(object):
         item.setText(_translate("dlgCosts", "koszt (1:2000)"))
         item = self.tblCosts.horizontalHeaderItem(5)
         item.setText(_translate("dlgCosts", "koszt (1:5000)"))
-        self.exportBtn.setText(_translate("dlgCosts", "eksportuj"))
+        self.exportBtn.setText(_translate("dlgCosts", "Eksportuj"))
+        self.closeBtn.setText(_translate("dlgCosts", "Zamknij"))
 
     def export_table_data(self):
         csv_file_path, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save CSV file", "", "CSV Files (*.csv)")
