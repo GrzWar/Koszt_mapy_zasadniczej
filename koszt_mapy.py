@@ -268,9 +268,11 @@ class KosztMapy:
 
 
                 # calculating cost of map
-                if area_ha < 10:
+                if area_ha <= 1:
+                    cost_of_map = ((1 * price * 2))
+                if area_ha > 1 and area_ha <= 10:
                     cost_of_map = ((area_ha * price * 2))
-                if area_ha > 10 and area_ha < 100:
+                if area_ha > 10 and area_ha <= 100:
                     cost_of_map = ((((price * 10) +((area_ha-10)*price * 0.8))*2))
                 if area_ha > 100:
                     cost_of_map = ((((10 + price +(90*price*0.8)+((area_ha-100)*price * 0.6))*2)))

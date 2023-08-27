@@ -19,7 +19,7 @@
      <x>10</x>
      <y>20</y>
      <width>651</width>
-     <height>201</height>
+     <height>211</height>
     </rect>
    </property>
    <property name="alternatingRowColors">
@@ -59,14 +59,27 @@
   <widget class="QPushButton" name="exportBtn">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>230</y>
+     <x>460</x>
+     <y>240</y>
      <width>90</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>eksportuj</string>
+    <string>Eksportuj</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closeBtn">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>240</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zamknij</string>
    </property>
   </widget>
  </widget>
@@ -85,6 +98,22 @@
     <hint type="destinationlabel">
      <x>335</x>
      <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgCosts</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>337</x>
+     <y>136</y>
     </hint>
    </hints>
   </connection>
